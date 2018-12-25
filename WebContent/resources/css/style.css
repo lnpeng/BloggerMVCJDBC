@@ -1,0 +1,29 @@
+body {
+	font-family: sans-serif;
+}
+
+.blogList h1 {
+	font-size: 16pt;
+}
+
+.blogList ul {
+	list-style: none;
+	margin-left: 0px;
+	padding-left: 0px;
+} 
+
+.blogList ul li:first-child {
+	border-top: 0px;
+} 
+
+.blogList ul li {
+	border-top: 1px solid #cccccc;
+} 
+
+.blogTime {
+	font-size: 8pt;
+}
+
+.blogForm h1 {
+	font-size: 16pt;
+}

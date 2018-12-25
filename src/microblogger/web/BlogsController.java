@@ -17,6 +17,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 @RequestMapping("/blogs")
 public class BlogsController {
+	private static final String MAX_LONG_AS_STRING = "9223372036854775807";
     private BlogRepository blogRepository;
 
     @Autowired
@@ -26,8 +27,9 @@ public class BlogsController {
 
     @RequestMapping(method = GET)
     public List<Blog> blogs(
+    		@RequestParam(value="max", defaultValue=MAX_LONG_AS_STRING) long max,
             @RequestParam(value = "count", defaultValue = "20") int count) {
-        return blogRepository.findRecent(count);
+        return blogRepository.findBlogs(max, count);
     }
 
     @RequestMapping(method = POST)

@@ -19,7 +19,7 @@ public class RootConfig {
     public DataSource dataSource() {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
-                .addScripts("schema.sql")
+                .addScripts("db/schema.sql", "db/dev-data.sql")
                 .build();
     }
 
