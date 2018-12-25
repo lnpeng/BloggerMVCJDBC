@@ -38,8 +38,11 @@ cd BlogsMVCJDBC
 ## Running the tests
 ### Test the Blogs web application in Web Browser
 - Launch the application from a web browser.
+![Home](https://github.com/lnpeng/BlogsMVCJDBC/blob/master/Screen%20Shot%202018-12-25%20at%205.30.26%20PM.png)
 - Add blogs
 ![Blogs](https://github.com/lnpeng/BlogsMVCJDBC/blob/master/Screen%20Shot%202018-12-23%20at%2010.07.40%20AM.png)
+- Register
+![Registration](https://github.com/lnpeng/BlogsMVCJDBC/blob/master/Screen%20Shot%202018-12-25%20at%205.33.05%20PM.png)
 
 ## Deployment
 Deploy the project on [Tomcat](http://tomcat.apache.org/) server in Eclipse IDE.
