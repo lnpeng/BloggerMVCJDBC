@@ -1,15 +1,14 @@
 # BlogsMVCJDBC
-Blogs web application is a Spring MVC web app where a blogger can add a blog and see recent blogs.
+Blogs web application is a Spring MVC web app where a blogger can register, add a blog and see recent blogs.
 
 # Description
-`home.jsp` and `blogs.jsp` are **views** that welcome users, display recent blogs and provide a form to add a new blog.
+`home.jsp`, `blogs.jsp`, `registerForm.jsp`, `profile.jsp` are **views** that welcome users, display recent blogs and provide forms to add a new blog and register themselves.
 
-`BlogsController` and `HomeController` are **controllers** that handle requests and process blog form. `HomeController`'s `home` method returns view name. `BlogsController`'s `blogs` method places recent blogs on the **model** and returns view name. The view names are resolved by `InternalResourceViewResolver`. When views are JSP, the model data are placed to the request as request attributes and rendered in JSP page. `BlogsController`'s `saveBlog` method saves a blog to the database.
+`HomeController`, `BlogsController` and `BloggerController` are **controllers** that handle requests and process forms. `HomeController`'s `home` method returns home view name. `BlogsController`'s `blogs` method uses a `BlogRepository` to retrieve recent blogs, places them on the **model** and returns view name; `saveBlog` method processes blog form and save a new blog to `BlogRepository`. `BloggerController` returns registration form's view name, processes the blogger registration form and save a new blogger to `BloggerRepository`, and redirects the request to a confirmation page. The view names are resolved by `InternalResourceViewResolver`.
 
-`JdbcBlogRepository` and `BlogRepository` are **Data Access Object (DAO)** that fetch a list of blogs and save a blog via JDBC templates. Spring's JDBC framework abstracts away the boilerplate data access code with template classes, i.e. `JdbcTemplate`.
-`JdbcTemplate` provides simple access to a database via JDBC and indexed-parameter queries.
+`JdbcBlogRepository` and `JdbcBloggerRepository` are **Data Access Object (DAO)** that fetch a list of blogs, save a blog, query a blogger, and save a bloger via JDBC templates. Spring's JDBC framework abstracts away the boilerplate data access code with template classes, i.e. `JdbcTemplate`. `JdbcTemplate` provides simple access to a database via JDBC and indexed-parameter queries.
 
-The blogs database contains `blog` table with columns `id`, `message`, and `created_at`.
+The blogs database contains `blog` table with columns `id`, `message`, and `created_at`, `blogger` table with columns `id`, `username`, `password`, `first_name`, `last_name`, `email`. 
 
 # Getting Started
 ## Prerequisites
