@@ -1,4 +1,4 @@
-# BlogsMVCJDBC
+# BloggerMVCJDBC
 Blogs web application is a Spring MVC web app where a blogger can register, add a blog and see recent blogs.
 
 # Description
@@ -21,8 +21,8 @@ The blogs database contains `blog` table with columns `id`, `message`, and `crea
 ## Installing
 - Create a local respository
 ```
-git clone git@github.com:lnpeng/BlogsMVCJDBC.git
-cd BlogsMVCJDBC
+git clone git@github.com:lnpeng/BloggerMVCJDBC.git
+cd BloggerMVCJDBC
 ```
 - Start Tomcat server
   - Switch to **Java EE perspective**
